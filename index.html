@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shigame</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -12,8 +15,63 @@
     <div id="Navigation">
         <div class="Content">
 
-            <div id="dropdown">
-                <p>a</p>
+            <div id="slide-over">
+                <div x-data="{ 
+                    slideOverOpen: false 
+                }" class="relative z-50 w-auto h-auto">
+                    <button @click="slideOverOpen=true"
+                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors bg-white border rounded-md hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-neutral-200/60 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Menu</button>
+                    <template x-teleport="body">
+                        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false"
+                            class="relative z-[99]">
+                            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms
+                                @click="slideOverOpen = false" class="fixed inset-0 bg-black bg-opacity-10"></div>
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="fixed inset-y-0 left-0 flex max-w-full">
+                                        <div x-show="slideOverOpen" @click.away="slideOverOpen = false"
+                                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+                                            x-transition:enter-start="-translate-x-full"
+                                            x-transition:enter-end="translate-x-0"
+                                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+                                            x-transition:leave-start="translate-x-0"
+                                            x-transition:leave-end="-translate-x-full" class="w-screen max-w-md">
+                                            <div
+                                                class="flex flex-col h-full py-5 overflow-y-scroll bg-white border-l shadow-lg border-neutral-100/70">
+                                                <div class="px-4 sm:px-5">
+                                                    <div class="flex items-start justify-between pb-1">
+                                                        <h2 class="text-base font-semibold leading-6 text-gray-900"
+                                                            id="slide-over-title">Slide Over Title</h2>
+                                                        <div class="flex items-center h-auto ml-3">
+                                                            <button @click="slideOverOpen=false"
+                                                                class="absolute top-0 right-0 z-30 flex items-center justify-center px-3 py-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-md border-neutral-200 text-neutral-600 hover:bg-neutral-100">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" class="w-4 h-4">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M6 18L18 6M6 6l12 12"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                                        <div
+                                                            class="relative h-full overflow-hidden border border-dashed rounded-md border-neutral-300">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+
             </div>
 
             <div id="logo">
@@ -27,37 +85,106 @@
 
 
             <div id="login">
-                <button class="custom-btn btn-1"><span>Sign In</span></button>
+                <a href="./dangnhap.html"><button class="custom-btn btn-1"><span>Sign In</span></button></a>
             </div>
         </div>
     </div>
 
+
+
+
+
+
     <div class="Main">
         <div id="Head-News">
 
-            <div id="GTA-6">
-                <img src="https://th.bing.com/th/id/OIP.5X_D9-Nm99mfuKUw099KZAHaEo?pid=ImgDet&rs=1" alt="">
-                <div id="sentence">
+            <div id="New-1">
+                <a href=""><img
+                        src="https://th.bing.com/th/id/R.dc39baba023fb0b7ae7445622e5b9406?rik=T3GZCr%2fHjYBOYA&pid=ImgRaw&r=0"
+                        alt=""></a>
+                <div class="bottom-left">
                     <a href="">
-                        <h1>GTA-6 trailer is released</h1>
+                        <h1><b>Everything you need to know about Aphelios</b></h1>
                     </a>
                 </div>
             </div>
 
-            <div class="side-games">
-
-                <div id="Valorant">
-                    <img src="https://th.bing.com/th/id/OIF.9Emd2oxcZTqaajnpGSQUFg?pid=ImgDet&rs=1" alt="">
-                </div>
-
-                <div id="CS-GO2">
-                    <img src="https://www.talkesport.com/wp-content/uploads/CSGO-7.jpg" alt="">
+            <div id="New-2">
+                <a href=""><img src="https://th.bing.com/th/id/OIF.9Emd2oxcZTqaajnpGSQUFg?pid=ImgDet&rs=1" alt=""></a>
+                <div class="bottom-left">
+                    <a href="">
+                        <h1><b>Valorant Agent 24 : ISO (Patch note 7.08)</b></h1>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h1>aaa</h1>
+
+        <div id="Latest-News">
+            <h1><b>Latest</b></h1>
+
+
+
+            <div class="game-container">
+                <div class="game-image">
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/10/tlou2-rdr2-lack-of-closure.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="game-info">
+                    <a href="">
+                        <h2><b>RED DEAD REDEMPTION 2</b></h2>
+                        <h3><b>The Last of Us 2 and Red Dead Redemption 2 Approach Closure Very Similarly</b></h3>
+                    </a>
+                    <p>The Last of Us 2 and Red Dead Redemption 2 both utilize realistic depictions of loss and a lack
+                        of closure to craft immersive stories.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="game-container">
+                <div class="game-image">
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/10/genshin-impact-how-to-get-the-fortress-of-meropide-card-back-from-the-rag-and-bone-shop.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="game-info">
+                    <a href="">
+                        <h2><b>GENSHIN IMPACT</b></h2>
+                        <h3><b>Genshin Impact: How To Get The Pankration! Card & Fortress of Meropide Card Back From The
+                                Rag And Bone Shop</b></h3>
+                    </a>
+                    <p>Players can exchange Credit Coupons for the Fortress of Meropide Card Back and Pankration TCG
+                        card at the Rag and Bone Shop in Genshin Impact.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="game-container">
+                <div class="game-image">
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/10/shadow-lugia-in-pokemon-go.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="game-info">
+                    <a href="">
+                        <h2><b>POKEMON GO</b></h2>
+                        <h3><b>Pokemon GO: Best Moveset For Shadow Lugia</b></h3>
+                    </a>
+                    <p>This Pokemon GO guide details the best moveset for Shadow Lugia in different battle scenarios.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="game-container">
+                <div class="game-image">
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/spider-man-miles-morales-phone.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="game-info">
+                    <a href="">
+                        <h2><b>SPIDER-MAN 2</b></h2>
+                        <h3><b>Spider-Man 2 Gives Miles Morales the Short End of the Stick</b></h3>
+                    </a>
+                    <p>Marvel's Spider-Man 2 features two main characters, but one gets notably less to do in the story
+                        compared to the other.</p>
+                </div>
+            </div>
         </div>
     </div>
 
