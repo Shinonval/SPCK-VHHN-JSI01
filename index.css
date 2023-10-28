@@ -1,0 +1,113 @@
+
+
+#Navigation {
+    background-color: black;
+    height: 4rem;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.Content {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+#logoName {
+    color: white;
+    text-decoration: none;
+}
+
+#login {
+    .btn-1 {
+        background: rgb(40, 142, 238);
+        background: linear-gradient(0deg, rgba(40, 142, 230) 0%, rgba(12,25,180,1) 100%);
+        border: none;
+        
+      }
+      .btn-1:hover {
+         background: rgb(0,3,255);
+      background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+      }
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    margin-right: 2.5rem;
+    margin-top: 1.25rem;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+
+
+
+/* BODY */
+#Head-News {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+#GTA-6 {
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    margin-top: 1.5rem
+}
+
+#GTA-6 > img {
+    width: 40rem;
+    height: 30rem;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#sentence {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+#sentence > h2 {
+    color: white;
+}
+
+#Valorant {
+
+}
+
+#Valorant > img {
+    width: 30rem;
+    height: 14rem;
+    margin-left: 10rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+#CS-GO2 {
+    
+}
+
+#CS-GO2 > img {
+    width: 30rem;
+    height: 14.25rem;
+    margin-top: 1.5rem;
+    margin-left: 10rem;
+    cursor: pointer;
+}
+
