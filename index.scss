@@ -1,10 +1,8 @@
-
-
 #Navigation {
     background-color: black;
-    height: 4rem;
+    height: 4.5rem;
     color: white;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -22,7 +20,7 @@
 
 
 #logoName {
-    color: white;  
+    color: white;
     text-decoration: none;
 
 }
@@ -32,11 +30,12 @@
         background: rgb(255, 255, 255);
         background: linear-gradient(0deg, rgb(220, 227, 233) 0%, rgb(26, 24, 24) 100%);
         border: none;
-        
-      }
-      .btn-1:hover {
-         background: rgb(255, 255, 255);
-      background: linear-gradient(0deg, rgb(26, 24, 24) 0%, rgb(220, 227,233) 100%);
+
+    }
+
+    .btn-1:hover {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgb(26, 24, 24) 0%, rgb(220, 227, 233) 100%);
     }
 }
 
@@ -55,9 +54,9 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
 }
 
@@ -68,6 +67,8 @@
     flex-direction: row;
     gap: 20px;
     margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 #New-1 {
@@ -78,7 +79,7 @@
 #New-2 {
     width: 50%;
     position: relative;
-    
+
 }
 
 .bottom-left {
@@ -95,23 +96,31 @@
     height: 100%;
 }
 
+
 #New-2 img {
     width: 100%;
     height: 100%;
 }
 
+
 // LATEST-NEWS
-#Latest-News {
-    margin-top: 4rem;
-    margin-left: 2rem;
+
+#Bullshit-Container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.5rem;
+    margin-left: 1.5rem;
 }
 
 .game-container {
     display: flex;
     gap: 20px;
     max-width: 55rem;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
 }
+
+
 
 .game-image img {
     height: 13rem;
@@ -131,3 +140,5 @@
 .popular {
     border: 1px solid black;
 }
+
+// SIDEWAY-NEWS
