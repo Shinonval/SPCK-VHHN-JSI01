@@ -50,4 +50,3 @@ const login = () => {
 
 export { auth, login };
 
-

@@ -1,0 +1,228 @@
+#Navigation {
+  background-color: black;
+  height: 4.5rem;
+  color: white;
+  padding-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#Navigation2 {
+  background-color: #FF7F50;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.ABCDE {
+  color: white;
+}
+
+.ABCDE a:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.Content {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+#slide-over {
+  color: black;
+  margin-left: 1.5rem;
+  margin-top: 12px;
+}
+
+
+#logoName {
+  width: 13rem;
+  margin-left: 4rem;
+}
+
+#login {
+  .btn-1 {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(220, 227, 233) 0%, rgb(26, 24, 24) 100%);
+    border: none;
+
+  }
+
+  .btn-1:hover {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(26, 24, 24) 0%, rgb(220, 227, 233) 100%);
+  }
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  margin-right: 1.5rem;
+  margin-top: 12px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+
+//IDK
+#Title {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 1rem;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+
+.game-list {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  margin-top: 2rem;
+}
+
+.game-item {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.game-item:hover {
+  background-color: #f9f9f9;
+}
+
+.game-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.game-description {
+  font-size: 14px;
+  color: #777;
+}
+
+.game-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+
+
+//FOOTER
+.footer {
+  margin-top: 5rem;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #0d0d0e;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: orangered;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}

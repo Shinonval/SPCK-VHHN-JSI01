@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./newsList.css">
+</head>
+
+<body>
+    <div id="Navigation">
+        <div class="Content">
+            <div id="slide-over">
+                <div x-data="{ 
+                    slideOverOpen: false 
+                }" class="relative z-50 w-auto h-auto">
+                    <button @click="slideOverOpen=true"
+                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors bg-white border rounded-md hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-neutral-200/60 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Menu</button>
+                    <template x-teleport="body">
+                        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false"
+                            class="relative z-[99]">
+                            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms
+                                @click="slideOverOpen = false" class="fixed inset-0 bg-black bg-opacity-10"></div>
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="fixed inset-y-0 left-0 flex max-w-full">
+                                        <div x-show="slideOverOpen" @click.away="slideOverOpen = false"
+                                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+                                            x-transition:enter-start="-translate-x-full"
+                                            x-transition:enter-end="translate-x-0"
+                                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+                                            x-transition:leave-start="translate-x-0"
+                                            x-transition:leave-end="-translate-x-full" class="w-screen max-w-md">
+                                            <div
+                                                class="flex flex-col h-full py-5 overflow-y-scroll bg-white border-l shadow-lg border-neutral-100/70">
+                                                <div class="px-4 sm:px-5">
+                                                    <div class="flex items-start justify-between pb-1">
+                                                        <h2 class="text-base font-semibold leading-6 text-gray-900"
+                                                            id="slide-over-title">Slide Over Title</h2>
+                                                        <div class="flex items-center h-auto ml-3">
+                                                            <button @click="slideOverOpen=false"
+                                                                class="absolute top-0 right-0 z-30 flex items-center justify-center px-3 py-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-md border-neutral-200 text-neutral-600 hover:bg-neutral-100">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" class="w-4 h-4">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M6 18L18 6M6 6l12 12"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                                        <div
+                                                            class="relative h-full overflow-hidden border border-dashed rounded-md border-neutral-300">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+
+            </div>
+
+            <div id="logo">
+                <a href="./index.html">
+                    <div id="logoName">
+                        <img src="https://blog.flamingtext.com/blog/2023/12/02/flamingtext_com_1701522005_337249369.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div id="login">
+                <a href="./dangnhap.html"><button class="custom-btn btn-1"><span>Sign In</span></button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="Navigation2">
+        <div id="Trending">
+            <h2><b>Trending</b></h2>
+        </div>
+        <div class="ABCDE">
+            <a href="">The Invincible</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">
+                Alan Wake 2</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">Super Mario Bros. Wonder</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">Spider-Man 2</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">Coming Soon</a>
+        </div>
+    </div>
+
+
+
+    <!-- BODY-LIST -->
+    <h1 id="Title">Which type of news are you finding ?</h1>
+    <div id="game-container">
+        <div class="game-list">
+            <div class="game-item" onclick="showGameDetails('Game 1', 'An amazing adventure game.', 'game1.jpg')">
+                <img class="game-image" src="https://th.bing.com/th/id/R.a8f43bd9359bc864cc48382de1fa26f8?rik=LEjxswvj27Ee%2fg&pid=ImgRaw&r=0" alt="Game 1">
+                <h3 class="game-title">CS-GO2</h3>
+                <p class="game-description">Compare your shooting skills.</p>
+            </div>
+
+            <div class="game-item" onclick="showGameDetails('Game 2', 'A challenging puzzle game.', 'game2.jpg')">
+                <img class="game-image" src="https://i1.wp.com/roonby.com/wp-content/uploads/2020/07/ddd8djc-68b444e6-738d-4428-822c-aac14e42c134.jpg?fit=1600%2C900&ssl=1" alt="Game 2">
+                <h3 class="game-title">Teamfight Tactics</h3>
+                <p class="game-description">Role-play in a virtual world.</p>
+            </div>
+
+            <div class="game-item" onclick="showGameDetails('Game 3', 'A futuristic shooter.', 'game3.jpg')">
+                <img class="game-image" src="https://www.gamedesigning.org/wp-content/uploads/2019/07/Multiplayer-Online-Battle-Arena-Video-Game-genre.jpg" alt="Game 3">
+                <h3 class="game-title">Leauge of Legends</h3>
+                <p class="game-description">A futuristic shooter.</p>
+            </div>
+        </div>
+
+        <div class="game-list">
+            <div class="game-item" onclick="showGameDetails('Game 1', 'An amazing adventure game.', 'game1.jpg')">
+                <img class="game-image" src="https://th.bing.com/th/id/R.28c748889e8d70a00c85eca5679fca90?rik=rjcyIjWRXXC0Wg&pid=ImgRaw&r=0" alt="Game 1">
+                <h3 class="game-title">Valorant</h3>
+                <p class="game-description">An amazing adventure game.</p>
+            </div>
+
+            <div class="game-item" onclick="showGameDetails('Game 2', 'A challenging puzzle game.', 'game2.jpg')">
+                <img class="game-image" src="https://c4.wallpaperflare.com/wallpaper/405/869/241/elder-scrolls-skyrim-wallpaper-preview.jpg" alt="Game 2">
+                <h3 class="game-title">The Elder Scrolls V: Skyrim</h3>
+                <p class="game-description">A challenging puzzle game.</p>
+            </div>
+
+            <div class="game-item" onclick="showGameDetails('Game 3', 'A futuristic shooter.', 'game3.jpg')">
+                <img class="game-image" src="https://th.bing.com/th/id/OIP.AnMlLuUssT_VLZ6HNHcSpAHaEK?rs=1&pid=ImgDetMain" alt="Game 3">
+                <h3 class="game-title">Call of Duty</h3>
+                <p class="game-description">A futuristic shooter.</p>
+            </div>
+        </div>
+
+        <div class="game-list">
+            <div class="game-item" onclick="showGameDetails('Game 1', 'An amazing adventure game.', 'game1.jpg')">
+                <img class="game-image" src="https://gamene.ws/wp-content/uploads/2021/01/the-legend-of-zelda-breath-of-the-wild-switch-hero-750x430.jpg" alt="Game 1">
+                <h3 class="game-title">The Legend of Zelda</h3>
+                <p class="game-description">An amazing adventure game.</p>
+            </div>
+
+            <div class="game-item" onclick="showGameDetails('Game 2', 'A challenging puzzle game.', 'game2.jpg')">
+                <img class="game-image" src="https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Rocket-League.jpg" alt="Game 2">
+                <h3 class="game-title">Rocket Leauge</h3>
+                <p class="game-description">A challenging puzzle game.</p>
+            </div>
+
+            <div class="game-item" onclick="showGameDetails('Game 3', 'A futuristic shooter.', 'game3.jpg')">
+                <img class="game-image" src="https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Overwatch.jpg" alt="Game 3">
+                <h3 class="game-title">Overwatch</h3>
+                <p class="game-description">A futuristic shooter.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+    <div id="Footer">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online games</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">buy games</a></li>
+                            <li><a href="#">review</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+
+
+
+    <script src="./newsList.js"></script>
+</body>
+
+</html>

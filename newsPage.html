@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shigame</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./newsPage.css">
+</head>
+
+<body>
+    <div id="Navigation">
+        <div class="Content">
+            <div id="slide-over">
+                <div x-data="{ 
+                    slideOverOpen: false 
+                }" class="relative z-50 w-auto h-auto">
+                    <button @click="slideOverOpen=true"
+                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors bg-white border rounded-md hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-neutral-200/60 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Menu</button>
+                    <template x-teleport="body">
+                        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false"
+                            class="relative z-[99]">
+                            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms
+                                @click="slideOverOpen = false" class="fixed inset-0 bg-black bg-opacity-10"></div>
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="fixed inset-y-0 left-0 flex max-w-full">
+                                        <div x-show="slideOverOpen" @click.away="slideOverOpen = false"
+                                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+                                            x-transition:enter-start="-translate-x-full"
+                                            x-transition:enter-end="translate-x-0"
+                                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+                                            x-transition:leave-start="translate-x-0"
+                                            x-transition:leave-end="-translate-x-full" class="w-screen max-w-md">
+                                            <div
+                                                class="flex flex-col h-full py-5 overflow-y-scroll bg-white border-l shadow-lg border-neutral-100/70">
+                                                <div class="px-4 sm:px-5">
+                                                    <div class="flex items-start justify-between pb-1">
+                                                        <h2 class="text-base font-semibold leading-6 text-gray-900"
+                                                            id="slide-over-title">Slide Over Title</h2>
+                                                        <div class="flex items-center h-auto ml-3">
+                                                            <button @click="slideOverOpen=false"
+                                                                class="absolute top-0 right-0 z-30 flex items-center justify-center px-3 py-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-md border-neutral-200 text-neutral-600 hover:bg-neutral-100">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" class="w-4 h-4">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M6 18L18 6M6 6l12 12"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                                        <div
+                                                            class="relative h-full overflow-hidden border border-dashed rounded-md border-neutral-300">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+
+            </div>
+
+            <div id="logo">
+                <a href="./index.html">
+                    <div id="logoName">
+                        <img src="https://blog.flamingtext.com/blog/2023/12/02/flamingtext_com_1701522005_337249369.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div id="login">
+                <a href="./dangnhap.html"><button class="custom-btn btn-1"><span>Sign In</span></button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="Navigation2">
+        <div id="Trending">
+            <h2><b>Trending</b></h2>
+        </div>
+        <div class="ABCDE">
+            <a href="">The Invincible</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">
+                Alan Wake 2</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">Super Mario Bros. Wonder</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">Spider-Man 2</a>
+        </div>
+        <div class="ABCDE">
+            <a href="">Coming Soon</a>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="News-About">
+        <h1><b>Genshin Impact: How To Use Charlotte's Passive Talent (Special Analysis Zoom Lens Gadget Location)</b>
+        </h1>
+        <p>Charlotte has a special passive talent but Genshin Impact players can only use it with a specific gadget
+        </p>
+
+        <br>
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/genshin-impact-how-to-use-charlotte-talent.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5"
+            alt="">
+    </div>
+
+    <div id="News-Info">
+        <p>Some <b>Genshin Impact</b> characters have brilliant passive talents that can be immensely helpful while
+            playing in
+            the world of Teyvat. For instance, at least one character from every region has a passive talent that shows
+            their region's <b>local specialties on the Genshin Impact map</b> , which makes the material collecting
+            journey far
+            easier. There are also characters that can save or obtain more resources, like units that get more reward
+            when going on expeditions, or those that reduce the cost of upgrading or forging items. Among <b>the
+            interesting passive talents</b> in Genshin Impact, Nahida likely has one of the best abilities. With
+            her Elemental Skill, the Dendro Archon can capture materials from afar (typically plants), which can help
+            greatly in collecting items that are on cliffsides and can be difficult to get manually. The ability also
+            helps in reducing the time taken to approach each material on the map. Players can even use Nahida's Tap
+            Skill to mass-collect items in the ability's range, reducing the amount of tapping required on some
+            platforms, like PC.</p>
+    </div>
+
+
+    <!-- <div class="Related-News"></div>
+        <p>Among the interesting passive talents in Genshin Impact, Nahida likely has one of the best abilities. With
+            her Elemental Skill, the Dendro Archon can capture materials from afar (typically plants), which can help
+            greatly in collecting items that are on cliffsides and can be difficult to get manually. The ability also
+            helps in reducing the time taken to approach each material on the map. Players can even use Nahida's Tap
+            Skill to mass-collect items in the ability's range, reducing the amount of tapping required on some
+            platforms, like PC.</p>
+        <h1><b>How To Use Charlotte's Passive Talent In Genshin Impact</b></h1>
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/using-charlotte-passive-talent-in-genshin-impact.jpg?q=50&fit=crop&w=1500&dpr=1.5" alt=""> -->
+
+
+
+<!-- FOOTER -->
+<div id="Footer">
+    <footer class="footer">
+        <div class="container">
+         <div class="row">
+           <div class="footer-col">
+             <h4>company</h4>
+             <ul>
+               <li><a href="#">about us</a></li>
+               <li><a href="#">our services</a></li>
+               <li><a href="#">privacy policy</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>get help</h4>
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">shipping</a></li>
+               <li><a href="#">returns</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>online games</h4>
+             <ul>
+               <li><a href="#">watch</a></li>
+               <li><a href="#">buy games</a></li>
+               <li><a href="#">review</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+</div>
+
+</body>
+
+</html>
