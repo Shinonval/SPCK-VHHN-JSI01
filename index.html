@@ -9,6 +9,7 @@
     <!-- Include the TailwindCSS library on your page -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./index.css">
+    <script src="./posts.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                         class="inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors bg-white border rounded-md hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-neutral-200/60 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Menu</button>
                     <template x-teleport="body">
                         <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false"
-                            class="relative z-[99]">        
+                            class="relative z-[99]">
                             <div x-show="slideOverOpen" x-transition.opacity.duration.600ms
                                 @click="slideOverOpen = false" class="fixed inset-0 bg-black bg-opacity-10"></div>
                             <div class="fixed inset-0 overflow-hidden">
@@ -40,7 +41,8 @@
                                                 <div class="px-4 sm:px-5">
                                                     <div class="flex items-start justify-between pb-1">
                                                         <h2 class="text-base font-semibold leading-6 text-gray-900"
-                                                            id="slide-over-title">Slide Over Title</h2>
+                                                            id="slide-over-title"><button id="logout">Log out</button>
+                                                        </h2>
                                                         <div class="flex items-center h-auto ml-3">
                                                             <button @click="slideOverOpen=false"
                                                                 class="absolute top-0 right-0 z-30 flex items-center justify-center px-3 py-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-md border-neutral-200 text-neutral-600 hover:bg-neutral-100">
@@ -56,8 +58,132 @@
                                                 </div>
                                                 <div class="relative flex-1 px-4 mt-5 sm:px-5">
                                                     <div class="absolute inset-0 px-4 sm:px-5">
-                                                        <div>
+                                                        <div
                                                             class="relative h-full overflow-hidden border border-dashed rounded-md border-neutral-300">
+                                                            <div id="Inner-info">
+                                                                <div class="dropdown-column">
+
+                                                                    <div class="ehehe">
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">Platforms
+                                                                                </h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">SG Originals
+                                                                                </h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">Game Guides
+                                                                                </h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">More</h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="ehehe1">
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">More</h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">More</h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">More</h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dropdown">
+                                                                            <button class="dropdown-btn">
+                                                                                <h1 class="underline-hover">More</h1>
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <!-- Content for the first dropdown -->
+                                                                                <p>Playstation</p>
+                                                                                <p>Xbox</p>
+                                                                                <p>Nintendo</p>
+                                                                                <p>PC Games</p>
+                                                                                <p>Mobile</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -76,7 +202,8 @@
             <div id="logo">
                 <a href="./index.html">
                     <div id="logoName">
-                        <img src="https://blog.flamingtext.com/blog/2023/12/02/flamingtext_com_1701522005_337249369.png" alt="">
+                        <img src="https://blog.flamingtext.com/blog/2023/12/02/flamingtext_com_1701522005_337249369.png"
+                            alt="">
                     </div>
                 </a>
             </div>
@@ -166,113 +293,7 @@
 
             <h1><b>Latest</b></h1>
 
-            <div class="game-container">
-                <div class="game-image">
-                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/10/tlou2-rdr2-lack-of-closure.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
-                        alt="">
-                </div>
-                <div class="game-info">
-                    <a href="./newsPage.html">
-                        <h2><b>RED DEAD REDEMPTION 2</b></h2>
-                        <h3><b>The Last of Us 2 and Red Dead Redemption 2 Approach Closure Very Similarly</b></h3>
-                    </a>
-                    <p>The Last of Us 2 and Red Dead Redemption 2 both utilize realistic depictions of loss and a
-                        lack
-                        of closure to craft immersive stories.</p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="game-container">
-                <div class="game-image">
-                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/10/genshin-impact-how-to-get-the-fortress-of-meropide-card-back-from-the-rag-and-bone-shop.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
-                        alt="">
-                </div>
-                <div class="game-info">
-                    <a href="">
-                        <h2><b>GENSHIN IMPACT</b></h2>
-                        <h3><b>Genshin Impact: How To Get The Pankration! Card & Fortress of Meropide Card Back From
-                                The
-                                Rag And Bone Shop</b></h3>
-                    </a>
-                    <p>Players can exchange Credit Coupons for the Fortress of Meropide Card Back and Pankration TCG
-                        card at the Rag and Bone Shop in Genshin Impact.</p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="game-container">
-                <div class="game-image">
-                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/10/shadow-lugia-in-pokemon-go.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
-                        alt="">
-                </div>
-                <div class="game-info">
-                    <a href="">
-                        <h2><b>POKEMON GO</b></h2>
-                        <h3><b>Pokemon GO: Best Moveset For Shadow Lugia</b></h3>
-                    </a>
-                    <p>This Pokemon GO guide details the best moveset for Shadow Lugia in different battle
-                        scenarios.
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="game-container">
-                <div class="game-image">
-                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/spider-man-miles-morales-phone.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
-                        alt="">
-                </div>
-                <div class="game-info">
-                    <a href="">
-                        <h2><b>SPIDER-MAN 2</b></h2>
-                        <h3><b>Spider-Man 2 Gives Miles Morales the Short End of the Stick</b></h3>
-                    </a>
-                    <p>Marvel's Spider-Man 2 features two main characters, but one gets notably less to do in the
-                        story
-                        compared to the other.</p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="game-container">
-                <div class="game-image">
-                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/takeda-naraka-bladepoint.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
-                        alt="">
-                </div>
-                <div class="game-info">
-                    <a href="">
-                        <h2><b>NARAKA: BLADEPOINT</b></h2>
-                        <h3><b>Best Takeda Build in Naraka: Bladepoint</b></h3>
-                    </a>
-                    <p>For all Takeda fans, here's a perfect build to destroy opponents in Naraka: Bladepoint.
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="game-container">
-                <div class="game-image">
-                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/alan-wake-2-parade-float-items-overlap-puzzle.jpg?q=50&fit=crop&w=342&h=240&dpr=1.5"
-                        alt="">
-                </div>
-                <div class="game-info">
-                    <a href="">
-                        <h2><b>ALAN WAKE 2</b></h2>
-                        <h3><b>Alan Wake 2: All Parade Float Item Locations</b></h3>
-                    </a>
-                    <p>Find missing parts of the parade float to complete this overlap ritual in Alan Wake 2.
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
+            <!-- ... -->
         </div>
 
 
@@ -302,19 +323,19 @@
                 <div class="Trending">
                     <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/pokemon-go-pokecoins.jpg?q=50&fit=crop&w=200&h=140&dpr=1.5"
                         alt="">
-                    <p><b><ins>Pokemon GO Reveals Black Friday 2023 Deal</ins></b></p>    
+                    <p><b><ins>Pokemon GO Reveals Black Friday 2023 Deal</ins></b></p>
                 </div>
                 <div class="Trending">
                     <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/starrail_2023_04_18_14_09_11-0-2.jpg?q=50&fit=crop&w=200&h=140&dpr=1.5"
                         alt="">
                     <p><b><ins>
-                        Honkai: Star Rail Leaks Design of New Character Acheron</ins></b></p>    
+                                Honkai: Star Rail Leaks Design of New Character Acheron</ins></b></p>
                 </div>
                 <div class="Trending">
                     <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/togashi-hxh-ending.jpg?q=50&fit=crop&w=200&h=140&dpr=1.5"
                         alt="">
                     <p><b><ins>
-                        Hunter x Hunter's Ending Revealed By Author Yoshihiro Togashi</ins></b></p>    
+                                Hunter x Hunter's Ending Revealed By Author Yoshihiro Togashi</ins></b></p>
                 </div>
             </div>
 
@@ -333,52 +354,52 @@
     <div id="Extra-Content">
         <button id="Extra"><a href="./newsList.html"><b>See more</b></a></button>
     </div>
-<a href=""></a>
+    <a href=""></a>
 
 
 
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
 
 
     <div id="Footer">
         <footer class="footer">
             <div class="container">
-             <div class="row">
-               <div class="footer-col">
-                 <h4>company</h4>
-                 <ul>
-                   <li><a href="#">about us</a></li>
-                   <li><a href="#">our services</a></li>
-                   <li><a href="#">privacy policy</a></li>
-                 </ul>
-               </div>
-               <div class="footer-col">
-                 <h4>get help</h4>
-                 <ul>
-                   <li><a href="#">FAQ</a></li>
-                   <li><a href="#">shipping</a></li>
-                   <li><a href="#">returns</a></li>
-                 </ul>
-               </div>
-               <div class="footer-col">
-                 <h4>online games</h4>
-                 <ul>
-                   <li><a href="#">watch</a></li>
-                   <li><a href="#">buy games</a></li>
-                   <li><a href="#">review</a></li>
-                 </ul>
-               </div>
-               <div class="footer-col">
-                 <h4>follow us</h4>
-                 <div class="social-links">
-                   <a href="#"><i class="fab fa-facebook-f"></i></a>
-                   <a href="#"><i class="fab fa-twitter"></i></a>
-                 </div>
-               </div>
-             </div>
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online games</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">buy games</a></li>
+                            <li><a href="#">review</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </footer>
+        </footer>
 
 
 
@@ -387,7 +408,30 @@
 
 
 
+    <script>
+        const posts = JSON.parse(localStorage.getItem("posts")) ?? [];
+        const postsContainer = document.getElementById("Latest-News")
+        posts.forEach((element, index) => {
+            postsContainer.innerHTML += `
+            <div class="game-container">
+                <div class="game-image">
+                    <img src="${element.image}"
+                        alt="">
+                </div>
+                <div class="game-info">
+                    <a href="/newsPage.html?id=${index}">
+                        <h2><b>${element.name}</b></h2>
+                        <h3><b>${element.description}</b></h3>
+                    </a>
+                    <p>${element.content}</p>
+                </div>
+            </div>
+            <hr>
+        `;
+        });
 
+    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

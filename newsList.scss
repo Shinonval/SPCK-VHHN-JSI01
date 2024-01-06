@@ -137,7 +137,40 @@ body {
   margin-bottom: 8px;
 }
 
+//SEARCH-BAR
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+  margin-left: 16.5rem;
+  margin-top: 1rem;
+}
 
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #ff7300;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  margin-top: 1rem  ;
+}
+
+form.example button:hover {
+  background: #da6c23;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 //FOOTER
 .footer {

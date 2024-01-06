@@ -9,6 +9,7 @@
     <!-- Include the TailwindCSS library on your page -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./newsList.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -76,7 +77,8 @@
             <div id="logo">
                 <a href="./index.html">
                     <div id="logoName">
-                        <img src="https://blog.flamingtext.com/blog/2023/12/02/flamingtext_com_1701522005_337249369.png" alt="">
+                        <img src="https://blog.flamingtext.com/blog/2023/12/02/flamingtext_com_1701522005_337249369.png"
+                            alt="">
                     </div>
                 </a>
             </div>
@@ -117,22 +119,32 @@
 
     <!-- BODY-LIST -->
     <h1 id="Title">Which type of news are you finding ?</h1>
+    <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
     <div id="game-container">
         <div class="game-list">
             <div class="game-item" onclick="showGameDetails('Game 1', 'An amazing adventure game.', 'game1.jpg')">
-                <img class="game-image" src="https://th.bing.com/th/id/R.a8f43bd9359bc864cc48382de1fa26f8?rik=LEjxswvj27Ee%2fg&pid=ImgRaw&r=0" alt="Game 1">
+                <img class="game-image"
+                    src="https://th.bing.com/th/id/R.a8f43bd9359bc864cc48382de1fa26f8?rik=LEjxswvj27Ee%2fg&pid=ImgRaw&r=0"
+                    alt="Game 1">
                 <h3 class="game-title">CS-GO2</h3>
                 <p class="game-description">Compare your shooting skills.</p>
             </div>
 
             <div class="game-item" onclick="showGameDetails('Game 2', 'A challenging puzzle game.', 'game2.jpg')">
-                <img class="game-image" src="https://i1.wp.com/roonby.com/wp-content/uploads/2020/07/ddd8djc-68b444e6-738d-4428-822c-aac14e42c134.jpg?fit=1600%2C900&ssl=1" alt="Game 2">
+                <img class="game-image"
+                    src="https://i1.wp.com/roonby.com/wp-content/uploads/2020/07/ddd8djc-68b444e6-738d-4428-822c-aac14e42c134.jpg?fit=1600%2C900&ssl=1"
+                    alt="Game 2">
                 <h3 class="game-title">Teamfight Tactics</h3>
                 <p class="game-description">Role-play in a virtual world.</p>
             </div>
 
             <div class="game-item" onclick="showGameDetails('Game 3', 'A futuristic shooter.', 'game3.jpg')">
-                <img class="game-image" src="https://www.gamedesigning.org/wp-content/uploads/2019/07/Multiplayer-Online-Battle-Arena-Video-Game-genre.jpg" alt="Game 3">
+                <img class="game-image"
+                    src="https://www.gamedesigning.org/wp-content/uploads/2019/07/Multiplayer-Online-Battle-Arena-Video-Game-genre.jpg"
+                    alt="Game 3">
                 <h3 class="game-title">Leauge of Legends</h3>
                 <p class="game-description">A futuristic shooter.</p>
             </div>
@@ -140,19 +152,24 @@
 
         <div class="game-list">
             <div class="game-item" onclick="showGameDetails('Game 1', 'An amazing adventure game.', 'game1.jpg')">
-                <img class="game-image" src="https://th.bing.com/th/id/R.28c748889e8d70a00c85eca5679fca90?rik=rjcyIjWRXXC0Wg&pid=ImgRaw&r=0" alt="Game 1">
+                <img class="game-image"
+                    src="https://th.bing.com/th/id/R.28c748889e8d70a00c85eca5679fca90?rik=rjcyIjWRXXC0Wg&pid=ImgRaw&r=0"
+                    alt="Game 1">
                 <h3 class="game-title">Valorant</h3>
                 <p class="game-description">An amazing adventure game.</p>
             </div>
 
             <div class="game-item" onclick="showGameDetails('Game 2', 'A challenging puzzle game.', 'game2.jpg')">
-                <img class="game-image" src="https://c4.wallpaperflare.com/wallpaper/405/869/241/elder-scrolls-skyrim-wallpaper-preview.jpg" alt="Game 2">
+                <img class="game-image"
+                    src="https://c4.wallpaperflare.com/wallpaper/405/869/241/elder-scrolls-skyrim-wallpaper-preview.jpg"
+                    alt="Game 2">
                 <h3 class="game-title">The Elder Scrolls V: Skyrim</h3>
                 <p class="game-description">A challenging puzzle game.</p>
             </div>
 
             <div class="game-item" onclick="showGameDetails('Game 3', 'A futuristic shooter.', 'game3.jpg')">
-                <img class="game-image" src="https://th.bing.com/th/id/OIP.AnMlLuUssT_VLZ6HNHcSpAHaEK?rs=1&pid=ImgDetMain" alt="Game 3">
+                <img class="game-image"
+                    src="https://th.bing.com/th/id/OIP.AnMlLuUssT_VLZ6HNHcSpAHaEK?rs=1&pid=ImgDetMain" alt="Game 3">
                 <h3 class="game-title">Call of Duty</h3>
                 <p class="game-description">A futuristic shooter.</p>
             </div>
@@ -160,19 +177,25 @@
 
         <div class="game-list">
             <div class="game-item" onclick="showGameDetails('Game 1', 'An amazing adventure game.', 'game1.jpg')">
-                <img class="game-image" src="https://gamene.ws/wp-content/uploads/2021/01/the-legend-of-zelda-breath-of-the-wild-switch-hero-750x430.jpg" alt="Game 1">
+                <img class="game-image"
+                    src="https://gamene.ws/wp-content/uploads/2021/01/the-legend-of-zelda-breath-of-the-wild-switch-hero-750x430.jpg"
+                    alt="Game 1">
                 <h3 class="game-title">The Legend of Zelda</h3>
                 <p class="game-description">An amazing adventure game.</p>
             </div>
 
             <div class="game-item" onclick="showGameDetails('Game 2', 'A challenging puzzle game.', 'game2.jpg')">
-                <img class="game-image" src="https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Rocket-League.jpg" alt="Game 2">
+                <img class="game-image"
+                    src="https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Rocket-League.jpg"
+                    alt="Game 2">
                 <h3 class="game-title">Rocket Leauge</h3>
                 <p class="game-description">A challenging puzzle game.</p>
             </div>
 
             <div class="game-item" onclick="showGameDetails('Game 3', 'A futuristic shooter.', 'game3.jpg')">
-                <img class="game-image" src="https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Overwatch.jpg" alt="Game 3">
+                <img class="game-image"
+                    src="https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Overwatch.jpg"
+                    alt="Game 3">
                 <h3 class="game-title">Overwatch</h3>
                 <p class="game-description">A futuristic shooter.</p>
             </div>
@@ -225,10 +248,6 @@
 
 
     </div>
-
-
-
-
     <script src="./newsList.js"></script>
 </body>
 

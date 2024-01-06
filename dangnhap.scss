@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 * {
 	box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(https://www.wallpapertip.com/wmimgs/80-806806_popular-video-games-collage.jpg);
+	background-image: url(https://www.wallpapertip.com/wmimgs/80-806806_popular-video-games-collage.jpg	);
 }
 
 .container {
@@ -19,11 +19,11 @@ body {
 }
 
 .screen {		
-	background: linear-gradient(90deg, #000000, #444442);		
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
 	position: relative;	
 	height: 600px;
 	width: 360px;	
-	box-shadow: 0px 0px 24px #0a0a0a;
+	box-shadow: 0px 0px 24px #5C5696;
 }
 
 .screen__content {
@@ -60,7 +60,7 @@ body {
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: #eb6e08;	
+	background: #6C63AC;	
 	top: -172px;
 	right: 0;	
 	border-radius: 32px;
@@ -69,7 +69,7 @@ body {
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: linear-gradient(270deg, #eb6e08, #0a0a0a);
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;
@@ -78,7 +78,7 @@ body {
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: #eb6e08;	
+	background: #7E7BB9;	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
@@ -131,8 +131,8 @@ body {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	color: #000000;
-	box-shadow: 0px 2px 2px #000000;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
 	cursor: pointer;
 	transition: .2s;
 }
@@ -153,7 +153,7 @@ body {
 .social-login {	
 	position: absolute;
 	height: 140px;
-	width: 180px;
+	width: 160px;
 	text-align: center;
 	bottom: 0px;
 	right: 0px;
@@ -174,5 +174,5 @@ body {
 }
 
 .social-login__icon:hover {
-	transform: scale(1.5);		
+	transform: scale(1.5);	
 }

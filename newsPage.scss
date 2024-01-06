@@ -97,7 +97,8 @@
 }
 
 #News-About img {
-    max-width: 70rem
+    max-width: 70rem;
+    width: 100%;
 }
 
 //NEWS-INFO
@@ -107,11 +108,18 @@
     margin-left: 6.2rem;
 }
 
+
+
 #News-Info p {
     font-size: 1.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(61, 61, 61);
 }
+
+
+//COMMENT-SECTION
+
+  
 
 //FOOTER
 .footer{
@@ -188,4 +196,12 @@
   .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
+  }
+
+
+  //Comment section
+  #cmt {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
